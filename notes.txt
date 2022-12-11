@@ -13,3 +13,94 @@ b => 5   17  19  25  26  55  95  105
 
 c => 5  10  17  19 20 25 26 30  55  95  105
                             k 
+
+------------------------------------------------
+ds -> 
+
+stack  -> 
+
+___
+___
+___
+LiFo -> Stack   [add: push , remove : pop , peek top , display ]
+
+add(){
+    add();
+}
+main(){
+    add();
+}
+
+FiFo -> Queue 
+
+1) static  [ fix size ]
+2) dynamic [ DMA - linked list ] 
+
+notation 
+1) prefix 
+2) postfix
+3) infix 
+
+
+
+infix => a+b
+prefix => +ab 
+postfix => ab+ 
+
+
+
+infix =>     a + b - c + d 
+prefix =>    +ab - c + d 
+            -+abc + d 
+            +-+abcd 
+infix =>     a + b - c + d 
+postfix=>    ab+ - c + d 
+             ab+c- + d 
+             ab+c-d+
+
+infix=>  a + b - c * d / f * g - h + k * l
+prefix=> a + b - c * d / f * g - h + k * l
+         a + b - *cd / f * g - h + k * l
+         +--+ab*/*cdfgh*kl
+         
+
+infix=>  a + (b - c) * d / f * g - (h + k) * l
+prefix=> 
+            -+a*/*-bcdfg*+hkl
+
+
+infix=>  a + (b - c) * d / f $ g - (h + k) * l ^ q $ x 
+prefix=> -+a/*-bcd$fg*+hk^l$qx
+
+
+
+
+
+
+
+infix =>     a + b - c + d 
+prefix=>      +-+abcd 
+
+
+
+                +
+            a       - 
+                  b   + 
+                     c  d 
+
+
+IN=>  A + B - C * D * E $ F $ g
+PRE=>  + A - B * C * D $ $ E F G 
+
+            + 
+        A      - 
+             B     * 
+                C      * 
+                    D      $  
+                        E      $     
+                            F     G
+
+
+
+
+

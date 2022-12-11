@@ -9,6 +9,9 @@ void merge(int a[],int l,int m,int u) // a 0 0 1
     int SIZE =  m - l + 1   ; //  1 
     int SIZE2 = u - m ;      //   1 
 
+    //copy 
+    
+
     while (i < SIZE && j < SIZE2)
     {
         if (a[i] > a[j])
