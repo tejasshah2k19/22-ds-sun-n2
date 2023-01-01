@@ -100,7 +100,53 @@ PRE=>  + A - B * C * D $ $ E F G
                         E      $     
                             F     G
 
+---------------------------------------------
+SMA ->  implicit 
 
+DMA -> user define explicit 
+
+// malloc() -> block of X amount -> malloc(20); // 20 byte 
+// calloc() ->  calloc(4,5); //20 byte 
+
+// realloc() 
+
+// free()
+
+
+int main(){ 
+    int a; //   gcc -> 4 byte  -> static 
+    int x[5]; //20 byte 
+
+    //25 byte 
+    //30 byte 
+    //16 byte free 
+
+    //300 
+
+
+}
+
+---------------------------------------------
+
+struct student { 
+    name 
+    batchType 
+    fees 
+    email
+    password 
+    struct student  *next; //NULL  
+};
+
+struct student *s;
+
+s = malloc()  // 2000 
+
+
+s = malloc() //  3000 
+
+s = malloc() //  4000 
+
+ 
 
 
 
