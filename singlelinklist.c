@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+
 struct node
 {
     int data;          // 4
@@ -85,6 +87,111 @@ void search(int num)
         printf("\n%d Found..", num);
     }
 }
+
+void deleteLast()
+{
+    struct node *p = head;
+    if (isEmpty())
+    {
+        printf("\nNo Data Found");
+    }
+    else
+    {
+
+        while (p->next != last && p->next != NULL)
+        {
+            p = p->next;
+        }
+        printf("\n%d is deleted...", last->data);
+
+        if (last == head)
+        {
+            free(p);
+            head = NULL;
+            last = NULL;
+        }
+        else
+        {
+            free(last);
+            p->next = NULL;
+            last = p;
+        }
+    }
+}
+
+void delBeg()
+{
+    struct node *p = head;
+    if (isEmpty())
+    {
+        printf("No Data found..");
+    }
+    else
+    {
+        if (head->next == NULL)
+        {
+            head = NULL;
+            last = NULL;
+        }
+        else
+        {
+            head = head->next;
+        }
+        free(p);
+    }
+}
+
+bool isEmpty()s
+{
+    return head == NULL; // true | false
+}
+
+void delAny()
+{
+    int num;
+    struct node *p, *r;
+    printf("\nEnter number");
+    scanf("%d", &num);
+
+    if (isEmpty())
+    {
+        printf("\nNo Data Found");
+    }
+    else
+    {
+        r = head;
+        while (r != NULL)
+        {
+            if (r->data == num)
+            {
+                break;
+            }
+            p = r;
+            r = r->next;
+        }
+        if (r == NULL)
+        {
+            printf("\n Invalid Data");
+        }
+        else
+        {
+            if (r == head)
+            {
+                delBeg();
+            }
+            else if (r->next == NULL)
+            {
+                deleteLast();
+            }
+            else
+            {
+                p->next = r->next;
+                free(r);
+            }
+        }
+    }
+}
+
 int main()
 {
     int choice;
@@ -92,7 +199,9 @@ int main()
 
     while (1)
     {
-        printf("\n0 For Exit\n1 For Add\n2 For Display\n3 For insertBeg\n4 For search\nEnter choice");
+        printf("\n0 For Exit\n1 For Add\n2 For Display\n3 For insertBeg\n4 For search");
+        printf("\n5 For Delete Last\n");
+        printf("\nEnter choice");
         scanf("%d", &choice);
 
         switch (choice)
@@ -110,6 +219,9 @@ int main()
             printf("\nEnter num for search");
             scanf("%d", &num);
             search(num);
+            break;
+        case 5:
+            deleteLast();
             break;
         case 0:
             exit(0);

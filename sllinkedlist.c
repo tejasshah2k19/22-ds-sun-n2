@@ -9,7 +9,7 @@ struct node
 
 struct node *createNode(int num)
 {
-    struct node *tmp = (struct node *)malloc(sizeof(struct node));
+    struct node *tmp = (struct node*)malloc(sizeof(struct node));//35
     tmp->data = num;
     tmp->next = NULL;
     return tmp;
@@ -68,7 +68,6 @@ void insertAny(int source,int num){
     }
     
 }
-
 
 void display()
 {

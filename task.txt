@@ -1,0 +1,82 @@
+*) Take 5 numbers from user store in ArrayList
+	1) find min and max
+	2) sum of all even and odd elements 
+	3) search given element in list if present print found else not found 
+	4) remove all duplicates from ArrayList 
+	
+*) Game - Two Player 
+
+cards -> 52 [positive numbers ]
+
+	masterDeck [ 10 5 25 22 63 63 22 9 ] 
+
+A 26				B 26 
+	aDeck			bDeck
+			8	10
+	battle ->	b is winner so 8 and 10 append into bDeck 
+	
+	
+aDeck [10 25 63 22] 		bDeck[5 22 63  9]
+			   battle=>10	5
+	  [25 63 22]			[22 63 9] 	
+			      a win 
+	  [25 63 22 10 5 ] 		      
+			   battle => 25 22 
+			    a win 
+	  [ 63 22 10 5 25 22 ] 	[63 9]
+			battle => 63	63
+			battle => 22    9
+	  [10 5 25 22 63 63 22 9]  [ ] 
+			A is winner 
+			
+play till either A or B has 0 card and declare winner 
+game can draw also.
+
+------------------------------------------------------------------------------------------------------
+
+expense manager -> 
+
+user [5 point ]
+    userid:1,name:abc,username:aaa,password:bbb 
+    userid:2,name:def,username:def,password:def
+
+expense [ 5 point ]
+    title:party,vendor:ccd,amount:2300,description:dummy ,date:12-dec-2022,userid:2[login] 
+
+
+Add Exp :-> 
+10-dec-2022  :  2000 ccd [userid-> 1]
+10-dec-2022  :  1500 fs  [1]
+22-dec-2022  :  2500 sainik [1] 
+24-dec-2022  :  1000  ccd [1]
+
+
+1. signup [2 point ]
+2. login  [2 point  ]
+3. exit   [ - ]
+
+
+login :-
+
+1) Add Exp  [2 point ]
+2) View Exp [2 point ]
+3) Date Report  [ sum of exp for each day of month[dec-2022]    ]   [ 10 point ]
+4) Vendor Report [ sum of exp for each vendor of month[dec-2022] ]  [ 10 point ]
+5) logout 
+
+
+how to 3rd? 
+ enter month 
+  dec-2022
+output:- 
+10-Dec-2022  3500
+22-Dec-2022  2500
+24-Dec-2022  1000
+
+how to 4th? 
+ enter month 
+  dec-2022
+output:-
+ccd          3000
+fs           1500  
+sainik       2500
